@@ -1,4 +1,4 @@
-ask "user jQuery? (yes/no) " do
+ask "use jQuery? (yes/no) " do
 
   # remove the Prototype adapter file
   remove_file 'public/javascripts/rails.js'
