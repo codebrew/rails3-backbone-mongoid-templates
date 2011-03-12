@@ -6,6 +6,6 @@ def ask(message, &block)
   end
 end
 
-%w{git mongoid jquery}.each do | recipe|
+%w{git rvm mongoid jquery jammit}.each do | recipe|
   apply File.expand_path("../recipes/#{recipe}.rb", __FILE__)
 end
