@@ -1,0 +1,20 @@
+embed_assets: on
+javascript_compressor: yui
+
+javascripts:
+  common:
+    - public/javascripts/vendor/jquery.js
+    - public/javascripts/vendor/rails.js
+    - public/javascripts/vendor/underscore.js
+    - public/javascripts/vendor/backbone.js
+    - public/javascripts/vendor/handlebars.js
+    
+  application:
+    - public/javascripts/app.js
+    - public/javascripts/app/models/*
+    - public/javascripts/app/controllers/*
+    - public/javascripts/app/views/*
+    
+stylesheets:
+  common:
+    - public/stylesheets/compiled/screen.css

@@ -1,0 +1,5 @@
+rvm --create 1.9.2@<%= app_name %>
+
+if ! command -v bundle ; then
+  gem install bundler
+fi
