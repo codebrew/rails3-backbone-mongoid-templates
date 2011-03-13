@@ -24,3 +24,7 @@ This application template will give you a Rail 3 starter app based on haml, jque
 
 Follow me on Twitter:
 [http://twitter.com/codebrewstudios](http://twitter.com/codebrewstudios)
+
+## Dependencies
+* ruby 1.9.2
+* rails 3.0.4 or greater
