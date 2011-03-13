@@ -22,5 +22,5 @@ This application template will give you a Rail 3 starter app based on haml, jque
 
 ## More Information
 
-Are the templates useful to you? Follow me on Twitter:
+Follow me on Twitter:
 [http://twitter.com/codebrewstudios](http://twitter.com/codebrewstudios)
