@@ -8,6 +8,8 @@ def ask(message, &block)
   block.call
 end
 
-%w{git rvm haml compass mongoid jquery jammit}.each do | recipe|
+#rspec, database cleaner, fabrication, cucumber capybara, backbone
+
+%w{git rvm haml compass mongoid jquery jammit rspec}.each do | recipe|
   apply File.expand_path("../recipes/#{recipe}.rb", __FILE__)
 end
