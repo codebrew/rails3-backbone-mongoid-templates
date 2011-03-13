@@ -1,6 +1,7 @@
 # Rails-3-Backbone-Mongoid-Templates
 
-This application template will give you a Rail 3 starter app based on backbone.js, mongoid, and devise in a matter of minutes
+This application template will give you a Rail 3 starter app based on haml, jquery, backbone.js, mongoid, and devise in a matter of minutes
+
 
 ## Running
 
