@@ -2,9 +2,9 @@
 say 'Installing RSpec'
 
 gem 'rspec-rails', '>= 2.5', :group => [:development, :test]
-gem 'database_cleaner', :group => :test
-gem 'fabrication', :group => :test
-gem 'mongoid-rspec', ">= 1.4.1", :group => :test
+gem 'database_cleaner', :group => [:development, :test]
+gem 'fabrication', :group => [:development, :test]
+gem 'mongoid-rspec', ">= 1.4.1", :group => [:development, :test]
 
 run "bundle install"
 
@@ -17,6 +17,15 @@ gsub_file 'spec/spec_helper.rb', /config.use_transactional_fixtures/, '# config.
 # remove either possible occurrence of "require rails/test_unit/railtie"
 gsub_file 'config/application.rb', /require 'rails\/test_unit\/railtie'/, "# require 'rails/test_unit/railtie'"
 gsub_file 'config/application.rb', /require "rails\/test_unit\/railtie"/, "# require 'rails/test_unit/railtie'"
+
+inject_into_file 'config/application.rb', :after => "class Application < Rails::Application\n" do
+  <<-RUBY
+    config.generators do |g|
+      g.test_framework      :rspec, :fixture => true
+      g.fixture_replacement :fabrication
+    end
+  RUBY
+end
 
 say "Removing test folder (not needed for RSpec)"
 run 'rm -rf test/'
