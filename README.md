@@ -30,3 +30,4 @@ Follow me on Twitter:
 ## Dependencies
 * ruby 1.9.2
 * rails 3.0.4 or greater
+* [coffeescript](http://jashkenas.github.com/coffee-script/)
