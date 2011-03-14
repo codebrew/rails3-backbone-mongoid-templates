@@ -1,4 +1,5 @@
 # Rails-3-Backbone-Mongoid-Templates
+Get started with coffeescript, backbone.js and mongodb.
 
 This application template will give you a Rail 3 starter app based on haml, jquery, backbone.js, coffeescript, mongoid, and devise in a matter of minutes
 
