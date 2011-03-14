@@ -1,6 +1,6 @@
 # Rails-3-Backbone-Mongoid-Templates
 
-This application template will give you a Rail 3 starter app based on haml, jquery, backbone.js, mongoid, and devise in a matter of minutes
+This application template will give you a Rail 3 starter app based on haml, jquery, backbone.js, coffeescript, mongoid, and devise in a matter of minutes
 
 ## What gets installed
 * haml for templating engine
@@ -8,6 +8,7 @@ This application template will give you a Rail 3 starter app based on haml, jque
 * compass for css authoring
 * 960.gs css grid system
 * Eric Meyer's css reset
+* coffeescript a dsl for writing javascript
 * jquery
 * underscore.js
 * backbone.js
