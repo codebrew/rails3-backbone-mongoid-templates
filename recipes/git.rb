@@ -10,9 +10,9 @@ ask "set up git? (yes/no) " do
   git :commit => "-aqm 'Initial commit of new Rails app'"
 
   # say_wizard "Creating a git working_branch (to follow the stream of development)."
-  git :checkout => ' -b working_branch'
-  git :add => '.'
-  git :commit => "-m 'Initial commit of working_branch (to establish a clean base line).'"
+  # git :checkout => ' -b working_branch'
+  # git :add => '.'
+  # git :commit => "-m 'Initial commit of working_branch (to establish a clean base line).'"
 end
 
 # say_recipe 'Git'
