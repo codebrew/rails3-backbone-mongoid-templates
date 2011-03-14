@@ -6,4 +6,26 @@
     = javascript_include_tag :defaults
     = csrf_meta_tag
 
-  = yield
+  %body    
+    #header
+      .container
+        %h1 Example
+        
+    #flash-messages
+      - unless notice.blank?
+        .notice
+          .container
+            %p= notice
+
+      - unless alert.blank?
+        .alert
+          .container
+            %p= alert
+                
+    #main
+      .container
+        = yield
+      
+    #footer
+      .container
+        footer

@@ -10,6 +10,6 @@ end
 
 #cucumber, capybara, backbone
 
-%w{git rvm haml compass mongoid jquery jammit coffeescript rspec devise}.each do | recipe|
+%w{git rvm haml compass mongoid jquery jammit coffeescript rspec devise home cleanup}.each do | recipe|
   apply File.expand_path("../recipes/#{recipe}.rb", __FILE__)
 end

@@ -1,0 +1,56 @@
+$ninesixty-columns: 24;
+
+.clearfix {
+  clear: both;
+}
+
+.container {
+  @include grid-container;
+}
+
+body {
+  background-color: #282828;
+  color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  margin: 0px;
+  padding: 0px 0px 40px;
+}
+
+#header {
+  @include linear-gradient(color-stops(#333333, #272727 30%, #111111));
+  height: 55px;
+}
+
+#main {
+  background-color: #E9E9E9;
+  min-height: 700px;
+}
+
+#footer {
+  background-color: #282828;
+  padding: 20px 0px;
+}
+
+#flash-messages {
+  background: #BCDD5B;
+  left: 0px;
+  line-height: 55px;
+  z-index: 1;
+  
+  .alert {
+    background: #F05931;
+  }
+  
+  .notice, .alert {
+    padding: 15px 0px;
+  }
+  
+  p {
+    line-height: 32px;
+    color: white;
+    display: block;
+    font-size: 16px;    
+    font-weight: bold;
+  }
+}
