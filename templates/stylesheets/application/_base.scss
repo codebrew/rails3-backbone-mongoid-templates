@@ -6,6 +6,7 @@ $ninesixty-columns: 24;
 
 .container {
   @include grid-container;
+  padding-top: 10px;
 }
 
 body {
@@ -20,6 +21,28 @@ body {
 #header {
   @include linear-gradient(color-stops(#333333, #272727 30%, #111111));
   height: 55px;
+  #logo {
+    @include grid(8);
+    h1 {
+      color: #fff;
+      font-size: 26px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+  }
+}
+
+#nav {
+  @include grid(16);
+  ul {
+    @include horizontal-list-container;
+    padding: 20px 0px 10px 0px;
+    float: right;
+    
+    li {
+      @include horizontal-list-item(10px, "left");
+    }
+  }
 }
 
 #main {
@@ -37,6 +60,10 @@ body {
   left: 0px;
   line-height: 55px;
   z-index: 1;
+  
+  .container {
+    padding-top: 0;
+  }
   
   .alert {
     background: #F05931;
