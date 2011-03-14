@@ -1,4 +1,4 @@
-ask "install mongoid? (yes/no)" do
+ask_to_install :mongoid do
   
   say "installing mongoid 2.0.0"
   
@@ -27,7 +27,5 @@ ask "install mongoid? (yes/no)" do
   # remove unnecessary 'config/database.yml' file
   remove_file 'config/database.yml'
 
-  git :tag => "mongoid_installation"
-  git :add => '.'
-  git :commit => "-am 'Mongoid installation.'"
+  git_commit "mongoid install"
 end

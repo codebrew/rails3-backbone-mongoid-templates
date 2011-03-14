@@ -1,4 +1,4 @@
-ask "use jQuery? (yes/no) " do
+ask_to_install :jquery do
 
   # remove the Prototype adapter file
   remove_file 'public/javascripts/rails.js'
@@ -19,8 +19,5 @@ ask "use jQuery? (yes/no) " do
   inject_into_file 'config/application.rb', "config.action_view.javascript_expansions[:defaults] = %w(jquery rails)\n", :after => "config.action_view.javascript_expansions[:defaults] = %w()\n", :verbose => false
   gsub_file "config/application.rb", /config.action_view.javascript_expansions\[:defaults\] = \%w\(\)\n/, ""
 
-  git :tag => "jquery_installation"
-  git :add => '.'
-  git :commit => "-am 'jQuery installation.'"
-  
+  git_commit "jquery install"  
 end

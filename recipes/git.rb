@@ -1,4 +1,4 @@
-ask "set up git? (yes/no) " do
+ask_to_install :git do
   say "setting up git....."
 
   remove_file '.gitignore'

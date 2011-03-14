@@ -1,4 +1,4 @@
-ask "setup jammit? (yes/no)" do
+ask_to_install :jammit do
   
   gem 'jammit'
     
@@ -8,4 +8,6 @@ ask "setup jammit? (yes/no)" do
   gsub_file 'app/views/layouts/application.html.haml', "= stylesheet_link_tag :all", "= include_stylesheets :common", :verbose => false
   
   copy_file File.expand_path("../../templates/package_assets.rake", __FILE__), "lib/tasks/package_assets.rake"
+  
+  git_commit "jammit install"
 end
