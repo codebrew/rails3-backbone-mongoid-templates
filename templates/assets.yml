@@ -10,7 +10,7 @@ javascripts:
     - public/javascripts/vendor/handlebars.js
     
   application:
-    - public/javascripts/app.js
+    - public/javascripts/app/app.js
     - public/javascripts/app/models/*
     - public/javascripts/app/controllers/*
     - public/javascripts/app/views/*
