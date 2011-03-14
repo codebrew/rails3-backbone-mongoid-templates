@@ -13,7 +13,7 @@ end
 
 def ask_to_install(recipe, &block)
   if yes? "do you want to install #{recipe.to_s}? (yes/no)"
-    @recipes_to_run << :recipe
+    @recipes_to_run << recipe
     @recipe_blocks << block
   end
 end

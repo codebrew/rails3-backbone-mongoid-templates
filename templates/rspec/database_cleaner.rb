@@ -1,4 +1,3 @@
-
 RSpec.configure do |config|
   require 'database_cleaner'
   

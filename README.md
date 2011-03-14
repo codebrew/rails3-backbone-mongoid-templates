@@ -5,7 +5,7 @@ This application template will give you a Rail 3 starter app based on haml, jque
 
 ## What gets installed
 * haml for templating engine
-* mongoid 2.0.0 for working with MongoDB
+* mongoid 2.0.0 for working with MongoDB or the option to use active_record
 * compass for css authoring
 * 960.gs css grid system
 * Eric Meyer's css reset

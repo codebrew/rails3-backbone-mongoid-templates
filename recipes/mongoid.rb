@@ -4,6 +4,8 @@ ask_to_install :mongoid do
   
   gem 'mongoid', '>= 2.0.0.rc.7'
   gem 'bson_ext', '>= 1.2.4'
+  
+  gsub_file "Gemfile", "gem 'sqlite3'", "# gem 'sqlite3'"
 
   #----------------------------------------------------------------------------
   # Resolve issue 17: https://github.com/fortuity/rails3-mongoid-devise/issues#issue/17
@@ -15,7 +17,18 @@ ask_to_install :mongoid do
   # http://redmine.ruby-lang.org/issues/show/4300
   #----------------------------------------------------------------------------                         
   inject_into_file 'config/environment.rb', "\nrequire 'yaml'\nYAML::ENGINE.yamler= 'syck'\n", :after => "require File.expand_path('../application', __FILE__)", :verbose => false
-
+  
+  inject_into_file 'config/application.rb', :after => "require 'rails/all'\n" do
+    <<-RUBY
+      require "action_controller/railtie"
+      require "action_mailer/railtie"
+      require "active_resource/railtie"
+      require "rails/test_unit/railtie"
+    RUBY
+  end
+  
+  gsub_file 'config/application.rb', "require 'rails/all'", "# require 'rails/all'"
+  
   # generate mongoid configuration
   run "bundle install"
 

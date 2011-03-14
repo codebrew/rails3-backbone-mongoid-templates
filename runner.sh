@@ -1,1 +1,1 @@
-rm -rf example && rails new example -m template.rb -T -J -O
+rm -rf example && rails new example -m template.rb -J
